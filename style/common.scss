@@ -1,0 +1,244 @@
+@use './variable.scss' as *;
+#m_phone{display: none;}
+#table_pc{    
+    width: 100%;  
+    height: $header_height;      
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    position: fixed;              
+    top: 0;
+    left: 0;
+    z-index: 100;    
+    background: #fff;
+    .main_logo {
+        a {
+            display: block;       
+            img {
+                width: 50px;
+                height: 50px;                    
+            }     
+        }
+    }
+
+    nav {
+        height: 100%;
+        .product {
+            height: 100%;
+            display: flex;    
+            justify-content: space-between;            
+            > li {           
+                height: 100%;     
+                > a {     
+                    height: 100%;               
+                    font-size: 14px;
+                    font-weight: 500;         
+                    display: flex;
+                    align-items: center;  
+                    padding: 0 20px;                          
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+                .lnb {                                              //서브메뉴 전체                    
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    background-color: #fff;
+                    top: $header_height;                            
+                    left: 0;                                        
+                    z-index: 50;
+                    padding: 60px 120px;                               
+                    .lnb_category {                            
+                        display: flex;                          
+                        flex-flow: row nowrap;                  
+                        justify-content: center;
+                        gap: 120px;                             
+                        > li {                                  
+                            display: flex;                                
+                            gap: 15px;                          
+                            > a {
+                                display: flex;
+                                flex-flow: column wrap;
+                                align-items: center;
+                                gap: 15px;                                                                                 
+                            }                                                                                 
+                        }                                                        
+                    }                                                                           
+                }
+                &:hover .lnb{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .right_menu {        
+        .user_menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            li {
+                a {
+                    display: block;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }                    
+                }                
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #table_pc{
+        padding: 0 40px;    
+        nav {
+            .product {                       
+                > li {                            
+                    .lnb {  
+                        padding: 40px 80px;                               
+                        .lnb_category {  
+                            > li {                                                        
+                                > a {                                    
+                                    img {
+                                        width: 50px;
+                                        height: 50px;                    
+                                    }                                                                            
+                                }                                                                                 
+                            }                                                        
+                        }
+                        &.active{
+                            display: block;
+                        }                                                                           
+                    }                    
+                }
+            }
+        }
+    
+        .right_menu {
+            // 로그인/회원가입/장바구니 아이콘
+            .user_menu {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                li {
+                    a {
+                        display: block;                                          
+                    }                
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #table_pc{display: none;}
+    #m_phone{
+        width: 100%;        
+        height: $header_height;      
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        position: fixed;              
+        top: 0;
+        left: 0;
+        z-index: 100;    
+        background-color: #fff;
+        .main_logo {
+            a {
+                display: block;      
+                img {
+                    width: 50px;
+                    height: 50px;                    
+                }      
+            }
+        }        
+    
+        .right_menu {
+            // 로그인/회원가입/장바구니 아이콘
+            .user_menu {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                li {
+                    a {
+                        display: block; 
+                        img {
+                            width: 20px;
+                            height: 20px;                            
+                        }                                          
+                    }                
+                }
+            }
+        }
+
+        .product {    
+            display: none;           
+            width: 100%;                
+            flex-flow: column nowrap;
+            gap: 20px;
+            position: absolute;
+            background-color: #fff;
+            top: $header_height;                            
+            left: 0;                                        
+            z-index: 50;            
+            padding: 20px 15px;
+            > li {      
+                display: flex;                               
+                flex-flow: column;
+                justify-content: space-between;
+                > a {     
+                    padding: 5px 0;          
+                    font-size: 10px;
+                    font-weight: 500;         
+                    display: flex;
+                    align-items: center;                                     
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+                .lnb {                                              //서브메뉴 전체                    
+                    display: none;                                                
+                    .lnb_category {                            
+                        display: flex;                          
+                        flex-flow: row nowrap;                  
+                        justify-content: center;                        
+                        gap: 20px;                  
+                        font-size: 10px;           
+                        > li {                                  
+                            display: flex;                                
+                            gap: 15px;                          
+                            > a {
+                                display: flex;
+                                flex-flow: column wrap;
+                                align-items: center;
+                                gap: 15px;       
+                                img{  
+                                    width: 40px;                                                                        
+                                    height: 40px;
+                                }
+                            }                                                                                 
+                        }                                                        
+                    }  
+                    &.active{
+                        display: block;
+                    }                                                                         
+                }
+                
+            }
+            &.active {
+                display: flex;
+            }
+        }
+    }
+}
