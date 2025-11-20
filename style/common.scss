@@ -1,6 +1,6 @@
 @use './variable.scss' as *;
 #m_phone{display: none;}
-#table_pc{    
+#tablet_pc{    
     width: 100%;  
     height: $header_height;      
     padding: 0 60px;
@@ -98,7 +98,7 @@
 
 
 @media (max-width: 1024px) {
-    #table_pc{
+    #tablet_pc{
         padding: 0 40px;    
         nav {
             .product {                       
@@ -140,7 +140,7 @@
 }
 
 @media (max-width: 767px) {
-    #table_pc{display: none;}
+    #tablet_pc{display: none;}
     #m_phone{
         width: 100%;        
         height: $header_height;      

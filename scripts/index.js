@@ -44,9 +44,9 @@ m_menu_list.forEach(select => {
         target.classList.toggle('active');
     });
 });
-/***************************************************************/
+/*************************메인 배너 스와이퍼**********************/
 const yakMainBnr = new Swiper('#banner_slide',{
-    //autoplay:{delay:1500},
+    autoplay:{delay:1500},
     loop:true,
     slidesPerView: 1,
     initialSlide:1,        
@@ -54,4 +54,12 @@ const yakMainBnr = new Swiper('#banner_slide',{
         el:'#main_banner .swiper-pagination',                
     },
 })
-/**************************************************************/
+/************************커피 머신 스와이퍼***********************/
+new Swiper(`#machin_slide`, {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});

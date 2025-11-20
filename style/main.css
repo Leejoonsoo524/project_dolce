@@ -3,7 +3,7 @@
   display: none;
 }
 
-#table_pc {
+#tablet_pc {
   width: 100%;
   height: 71px;
   padding: 0 60px;
@@ -17,25 +17,25 @@
   z-index: 100;
   background: #fff;
 }
-#table_pc .main_logo a {
+#tablet_pc .main_logo a {
   display: block;
 }
-#table_pc .main_logo a img {
+#tablet_pc .main_logo a img {
   width: 50px;
   height: 50px;
 }
-#table_pc nav {
+#tablet_pc nav {
   height: 100%;
 }
-#table_pc nav .product {
+#tablet_pc nav .product {
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
-#table_pc nav .product > li {
+#tablet_pc nav .product > li {
   height: 100%;
 }
-#table_pc nav .product > li > a {
+#tablet_pc nav .product > li > a {
   height: 100%;
   font-size: 14px;
   font-weight: 500;
@@ -43,10 +43,10 @@
   align-items: center;
   padding: 0 20px;
 }
-#table_pc nav .product > li > a:hover {
+#tablet_pc nav .product > li > a:hover {
   opacity: 0.5;
 }
-#table_pc nav .product > li .lnb {
+#tablet_pc nav .product > li .lnb {
   display: none;
   position: absolute;
   width: 100%;
@@ -56,66 +56,66 @@
   z-index: 50;
   padding: 60px 120px;
 }
-#table_pc nav .product > li .lnb .lnb_category {
+#tablet_pc nav .product > li .lnb .lnb_category {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   gap: 120px;
 }
-#table_pc nav .product > li .lnb .lnb_category > li {
+#tablet_pc nav .product > li .lnb .lnb_category > li {
   display: flex;
   gap: 15px;
 }
-#table_pc nav .product > li .lnb .lnb_category > li > a {
+#tablet_pc nav .product > li .lnb .lnb_category > li > a {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 15px;
 }
-#table_pc nav .product > li:hover .lnb {
+#tablet_pc nav .product > li:hover .lnb {
   display: block;
 }
-#table_pc .right_menu .user_menu {
+#tablet_pc .right_menu .user_menu {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-#table_pc .right_menu .user_menu li a {
+#tablet_pc .right_menu .user_menu li a {
   display: block;
 }
-#table_pc .right_menu .user_menu li a img {
+#tablet_pc .right_menu .user_menu li a img {
   width: 20px;
   height: 20px;
 }
-#table_pc .right_menu .user_menu li a img:hover {
+#tablet_pc .right_menu .user_menu li a img:hover {
   opacity: 0.5;
 }
 
 @media (max-width: 1024px) {
-  #table_pc {
+  #tablet_pc {
     padding: 0 40px;
   }
-  #table_pc nav .product > li .lnb {
+  #tablet_pc nav .product > li .lnb {
     padding: 40px 80px;
   }
-  #table_pc nav .product > li .lnb .lnb_category > li > a img {
+  #tablet_pc nav .product > li .lnb .lnb_category > li > a img {
     width: 50px;
     height: 50px;
   }
-  #table_pc nav .product > li .lnb.active {
+  #tablet_pc nav .product > li .lnb.active {
     display: block;
   }
-  #table_pc .right_menu .user_menu {
+  #tablet_pc .right_menu .user_menu {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  #table_pc .right_menu .user_menu li a {
+  #tablet_pc .right_menu .user_menu li a {
     display: block;
   }
 }
 @media (max-width: 767px) {
-  #table_pc {
+  #tablet_pc {
     display: none;
   }
   #m_phone {
@@ -275,6 +275,86 @@ main #main_banner #banner_slide .swiper-wrapper .swiper-slide a .banner_text h3 
 main #main_banner #banner_slide .swiper-wrapper .swiper-slide a .banner_text p {
   font-size: 18px;
   line-height: 150%;
+}
+main #main_banner #banner_slide .swiper-pagination-bullet-active {
+  background: #421D0F;
+}
+main #machine {
+  width: 100%;
+  padding: 0 240px;
+  margin-bottom: 120px;
+}
+main #machine .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+main #machine .title h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+main #machine .title p {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+}
+main #machine .title p:hover {
+  background: #421D0F;
+  color: #fff;
+  cursor: pointer;
+}
+main #machine .swiper {
+  position: relative;
+  padding-bottom: 40px;
+}
+main #machine .swiper .swiper-wrapper {
+  display: flex;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide {
+  background: #f9f9f9;
+  padding-bottom: 20px;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide a {
+  display: block;
+  overflow: hidden;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide a img {
+  width: 100%;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide .item_text {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  padding: 0 10px;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+  font-size: 14px;
+}
+main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+main #machine .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+main #machine .swiper .swiper-pagination-bullet-active {
+  background: #421D0F;
 }
 
 @media (max-width: 1024px) {

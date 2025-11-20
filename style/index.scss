@@ -57,7 +57,81 @@ main {
                         }
                     }
                 }
-            }            
+            }  
+            .swiper-pagination-bullet-active {background: #421D0F;}
+        }
+    }
+
+    #machine{
+        width: 100%;
+        padding: 0 240px; 
+        margin-bottom: 120px;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+            h3{font-size: 30px; font-weight: 700;}
+            p{
+                font-size: 14px; 
+                color:#555;
+                padding: 10px 20px; 
+                border: 1px solid #f0f0f0; 
+                border-radius: 10px;
+                &:hover{
+                    background:#421D0F; 
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }        
+        }
+        .swiper{
+            position: relative;
+            padding-bottom: 40px;
+            .swiper-wrapper{
+                display: flex;                
+                .swiper-slide{       
+                    background: #f9f9f9;
+                    padding-bottom: 20px;
+                    a{
+                        display: block;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+                    }                                 
+                    .item_text{
+                        display: flex;
+                        flex-flow: column wrap;
+                        gap: 15px;
+                        padding: 0 10px;
+                        h5{
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                        .price{
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;                            
+                            span{font-size: 14px;}
+                            img{
+                                &:hover{
+                                    opacity: 0.5;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                position: absolute;
+                bottom: 10px;   
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .swiper-pagination-bullet-active {background: #421D0F;}
         }
     }
 }
