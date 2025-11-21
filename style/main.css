@@ -276,12 +276,18 @@ main #main_banner #banner_slide .swiper-wrapper .swiper-slide a .banner_text p {
   font-size: 18px;
   line-height: 150%;
 }
-main #main_banner #banner_slide .swiper-pagination-bullet-active {
+main #main_banner #banner_slide .swiper-scrollbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+main #main_banner #banner_slide .swiper-scrollbar-drag {
   background: #421D0F;
 }
 main #machine {
   width: 100%;
-  padding: 0 240px;
+  padding: 0 120px;
   margin-bottom: 120px;
 }
 main #machine .title {
@@ -316,10 +322,6 @@ main #machine .swiper .swiper-wrapper .swiper-slide {
   background: #f9f9f9;
   padding-bottom: 20px;
 }
-main #machine .swiper .swiper-wrapper .swiper-slide a {
-  display: block;
-  overflow: hidden;
-}
 main #machine .swiper .swiper-wrapper .swiper-slide a img {
   width: 100%;
 }
@@ -332,6 +334,11 @@ main #machine .swiper .swiper-wrapper .swiper-slide .item_text {
 main #machine .swiper .swiper-wrapper .swiper-slide .item_text h5 {
   font-size: 16px;
   font-weight: 500;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price {
   display: flex;
@@ -356,11 +363,143 @@ main #machine .swiper .swiper-pagination {
 main #machine .swiper .swiper-pagination-bullet-active {
   background: #421D0F;
 }
+main #capsule {
+  width: 100%;
+  padding: 0 120px;
+  margin-bottom: 120px;
+}
+main #capsule h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main #capsule .select_cap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+main #capsule .select_cap .product {
+  display: flex;
+  gap: 20px;
+}
+main #capsule .select_cap .product button {
+  border: 1px solid #f0f0f0;
+  padding: 10px 20px;
+}
+main #capsule .select_cap .product button:hover, main #capsule .select_cap .product button.active {
+  background: #421D0F;
+  color: #fff;
+  cursor: pointer;
+}
+main #capsule .select_cap .more {
+  border: 1px solid #f0f0f0;
+  padding: 10px 20px;
+}
+main #capsule .select_cap .more:hover {
+  background: #421D0F;
+  color: #fff;
+  cursor: pointer;
+}
+main #capsule .select_cap button, main #capsule .select_cap p {
+  font-size: 14px;
+  color: #555;
+  border-radius: 10px;
+}
+main #capsule .swiper {
+  position: relative;
+  padding-bottom: 40px;
+}
+main #capsule .swiper .swiper-wrapper {
+  display: flex;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide {
+  background: #f9f9f9;
+  padding-bottom: 20px;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide a img {
+  width: 100%;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide .item_text {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  padding: 0 10px;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+  font-size: 14px;
+}
+main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+main #capsule .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+main #capsule .swiper .swiper-pagination-bullet-active {
+  background: #421D0F;
+}
+main #event {
+  width: 100%;
+  padding: 0 120px;
+  margin-bottom: 120px;
+}
+main #event h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main #event #event_slide {
+  width: 100%;
+}
+main #event #event_slide .swiper-wrapper {
+  width: 100%;
+}
+main #event #event_slide .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main #event #event_slide .swiper-wrapper .swiper-slide.slide1 {
+  background-image: url(../image/event_banner1.png);
+}
+main #event #event_slide .swiper-wrapper .swiper-slide.slide2 {
+  background-image: url(../image/event_banner2.png);
+}
+main #event #event_slide .swiper-wrapper .swiper-slide.slide3 {
+  background-image: url(../image/event_banner3.png);
+}
+main #event #event_slide .swiper-scrollbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+main #event #event_slide .swiper-scrollbar-drag {
+  background: #421D0F;
+}
 
 @media (max-width: 1024px) {
-  main {
-    width: 100%;
-  }
   main #main_banner {
     margin-bottom: 60px;
   }
@@ -382,6 +521,83 @@ main #machine .swiper .swiper-pagination-bullet-active {
   }
   main #main_banner #banner_slide .swiper-wrapper .swiper-slide a .banner_text p {
     font-size: 13px;
+  }
+  main #machine {
+    padding: 0 40px;
+    margin-bottom: 60px;
+  }
+  main #machine .title h3 {
+    font-size: 24px;
+  }
+  main #machine .title p {
+    font-size: 11px;
+  }
+  main #machine .swiper {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide {
+    padding-bottom: 10px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide a img {
+    width: 100%;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text {
+    gap: 10px;
+    padding: 0 5px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+    font-size: 12px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+    font-size: 10px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price img {
+    width: 16px;
+    height: 16px;
+  }
+  main #machine .swiper .swiper-pagination-bullet {
+    transform: scale(0.8);
+  }
+  main #capsule {
+    padding: 0 40px;
+    margin-bottom: 60px;
+  }
+  main #capsule h3 {
+    font-size: 24px;
+  }
+  main #capsule .select_cap {
+    margin-bottom: 25px;
+  }
+  main #capsule .select_cap .product {
+    gap: 15px;
+  }
+  main #capsule .select_cap button,
+  main #capsule .select_cap p {
+    font-size: 12px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+    font-size: 12px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+    font-size: 10px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price img {
+    width: 16px;
+    height: 16px;
+  }
+  main #capsule .swiper .swiper-pagination-bullet {
+    transform: scale(0.8);
+  }
+  main #event {
+    padding: 0 40px;
+    margin-bottom: 60px;
+  }
+  main #event h3 {
+    font-size: 24px;
+  }
+  main #event #event_slide .swiper-wrapper .swiper-slide {
+    height: 240px;
   }
 }
 /* Mobile */
@@ -412,6 +628,94 @@ main #machine .swiper .swiper-pagination-bullet-active {
   }
   main #main_banner #banner_slide .swiper-wrapper .swiper-slide a .banner_text p {
     font-size: 8px;
+  }
+  main #machine {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+  main #machine .title {
+    margin-bottom: 20px;
+  }
+  main #machine .title h3 {
+    font-size: 18px;
+  }
+  main #machine .title p {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+  main #machine .swiper {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide {
+    padding-bottom: 10px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide a img {
+    width: 100%;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text {
+    gap: 10px;
+    padding: 0 5px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+    font-size: 12px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+    font-size: 10px;
+  }
+  main #machine .swiper .swiper-wrapper .swiper-slide .item_text .price img {
+    width: 16px;
+    height: 16px;
+  }
+  main #machine .swiper .swiper-pagination-bullet {
+    transform: scale(0.6);
+  }
+  main #capsule {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+  main #capsule h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  main #capsule .select_cap {
+    margin-bottom: 15px;
+  }
+  main #capsule .select_cap button,
+  main #capsule .select_cap p {
+    font-size: 8px;
+  }
+  main #capsule .select_cap .product {
+    gap: 10px;
+  }
+  main #capsule .select_cap .product button {
+    padding: 5px 8px;
+  }
+  main #capsule .select_cap .more {
+    padding: 5px 10px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text h5 {
+    font-size: 12px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price span {
+    font-size: 10px;
+  }
+  main #capsule .swiper .swiper-wrapper .swiper-slide .item_text .price img {
+    width: 16px;
+    height: 16px;
+  }
+  main #capsule .swiper .swiper-pagination-bullet {
+    transform: scale(0.6);
+  }
+  main #event {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+  main #event h3 {
+    font-size: 18px;
+  }
+  main #event #event_slide .swiper-wrapper .swiper-slide {
+    height: 130px;
   }
 }
 

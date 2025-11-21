@@ -45,21 +45,102 @@ m_menu_list.forEach(select => {
     });
 });
 /*************************메인 배너 스와이퍼**********************/
-const yakMainBnr = new Swiper('#banner_slide',{
+const mainBnr = new Swiper('#banner_slide',{
     autoplay:{delay:1500},
     loop:true,
     slidesPerView: 1,
     initialSlide:1,        
-    pagination:{
-        el:'#main_banner .swiper-pagination',                
+    scrollbar:{
+        el: '.swiper-scrollbar',        
     },
 })
 /************************커피 머신 스와이퍼***********************/
 new Swiper(`#machin_slide`, {
     loop: true,
-    slidesPerView: 4,
-    spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
     },
+    breakpoints: {        
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },        
+        768: {
+            slidesPerView: 2.8,
+            spaceBetween: 50,
+
+        },        
+        1024: {
+            slidesPerView: 3.4,
+            spaceBetween: 70,
+
+        },        
+        1280: {
+            slidesPerView: 4,
+            spaceBetween: 140,
+        }
+    }
 });
+
+/************************커피 캡슐 스와이퍼***********************/
+const productSwiperSet = [
+    {swiperId: 'origin_cap'},
+    {swiperId: 'neo_cap'},
+];
+productSwiperSet.forEach(set => {
+    new Swiper(`#${set.swiperId}`, {
+        loop: true,        
+        pagination: {
+        el: ".swiper-pagination",
+        },
+        breakpoints: {        
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+
+            },        
+            768: {
+                slidesPerView: 2.8,
+                spaceBetween: 50,
+
+            },        
+            1024: {
+                slidesPerView: 3.4,
+                spaceBetween: 70,
+
+            },        
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 140,
+            }
+        }
+    });
+});
+/************************커피 캡슐 선택**************************/
+const capCatagory = document.querySelectorAll('#capsule .select_cap .product button');
+const capSlider = document.querySelectorAll('#capsule .swiper');
+
+capSlider.forEach((s, i) => {
+    s.style.display = i === 0 ? 'block' : 'none';
+});
+
+capCatagory.forEach((btn, index) => { 
+    btn.addEventListener('click', () => {    
+        capCatagory.forEach((i) => i.classList.remove('active'));    
+        btn.classList.add('active');
+
+        capSlider.forEach(s => s.style.display = 'none');        
+        capSlider[index].style.display = 'block';        
+    });
+});
+/************************이벤트 배너****************************/
+
+const eventBnr = new Swiper('#event_slide',{
+    autoplay:{delay:1500},
+    loop:true,
+    slidesPerView: 1,
+    initialSlide:1,        
+    scrollbar:{
+        el: '.swiper-scrollbar',        
+    },
+})
