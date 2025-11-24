@@ -96,7 +96,6 @@
     }
 }
 
-
 @media (max-width: 1024px) {
     #tablet_pc{
         padding: 0 40px;    
@@ -239,6 +238,89 @@
             &.active {
                 display: flex;
             }
+        }
+    }
+}
+
+
+footer{
+    width: 100%;
+    background: #f0f0f0;
+    .footer_inner{
+        padding: 100px 120px;
+        display: flex;        
+        align-items: center;
+        justify-content: space-between;
+        .t_pc_footer{
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 15px;
+            h4{font-size: 30px; font-weight: 700;margin-bottom: 30px;}
+            .info{
+                display: flex;
+                flex-flow: row nowrap;
+                li{
+                    position: relative;
+                    margin-right: 25px;
+                    font-size: 11px; color: #555;
+                    a{
+                        color: #555;                         
+                        &:hover{
+                            text-decoration: underline;
+                            text-decoration-color: #888;
+                            text-underline-offset: 4px;
+                        }
+                    }
+                    & + li::before {
+                        content: "";
+                        position: absolute;
+                        left: -12.5px; 
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 10px;
+                        background-color: #ccc; // 선 색상
+                    }
+                }                
+            }            
+        }
+        h5{font-size: 20px; text-align: end;}
+    }
+}
+
+@media (max-width: 1024px) {
+    footer{        
+        .footer_inner{
+            padding: 30px 40px;            
+            .t_pc_footer{                
+                h4{font-size: 24px; margin-bottom: 15px;}
+                .info{                    
+                    li{font-size: 9px;}
+                }            
+            }
+            h5{font-size: 15px;}
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    footer{        
+        .footer_inner{
+            flex-flow: column;
+            padding: 30px 15px;       
+            gap: 15px;     
+            align-items: flex-start;
+            .t_pc_footer{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 15px;
+                h4{font-size: 20px; margin-bottom: 15px;}
+                .info{                    
+                    li{font-size: 7px;}
+                }   
+                .m_info{display: flex; flex-flow: column wrap; gap: 15px;}         
+            }
+            h5{font-size: 10px; text-align: left;}
         }
     }
 }

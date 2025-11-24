@@ -1,7 +1,7 @@
 const aTag = document.querySelectorAll('a[href="#"]');
 aTag.forEach(tag => {
     tag.addEventListener('click', (e) => {
-        e.preventDefault(); // ← 기본 동작(맨 위로 이동) 막기
+        e.preventDefault(); // ← 기본 동작 막기
     });
 });
 
@@ -111,7 +111,7 @@ productSwiperSet.forEach(set => {
             },        
             1280: {
                 slidesPerView: 4,
-                spaceBetween: 140,
+                spaceBetween: 100,
             }
         }
     });
@@ -143,4 +143,35 @@ const eventBnr = new Swiper('#event_slide',{
     scrollbar:{
         el: '.swiper-scrollbar',        
     },
+})
+
+/************************SNS 배너******************************/
+
+const snsBnr = new Swiper('#sns_slide',{    
+    loop:true,    
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    breakpoints: {        
+        0: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+
+        },        
+        768: {
+            slidesPerView: 2.3,
+            spaceBetween: 30,
+
+        },        
+        1024: {
+            slidesPerView: 2.8,
+            spaceBetween: 40,
+
+        },        
+        1280: {
+            slidesPerView: 3,
+            spaceBetween: 80,
+        }
+    }
+
 })
