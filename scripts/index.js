@@ -25,15 +25,20 @@ t_menu_list.forEach(select => {
 
 
 /**********************모바일 변수 선언***************************/
-const m_menu = document.querySelectorAll('#m_phone .user_menu li');
+const m_menu = document.querySelectorAll('#m_phone .user_menu li button');
 const m_product = document.querySelector('#m_phone .product');
+const m_search = document.querySelector('#m_phone .search');
 const m_menu_list = document.querySelectorAll('#m_phone .product [class*="_lnb"]');
 
 /**********************모바일 아이콘 선택**************************/
 m_menu.forEach(icon => {
     icon.addEventListener('click', () => {
-        if(icon.classList.contains('menu_icon')){
+        const li = icon.parentElement;
+        if(li.classList.contains('menu_icon')){
             m_product.classList.toggle('active');
+        }        
+        else if(li.classList.contains('search_icon')){
+            m_search.classList.toggle('active');
         }        
     });
 });
@@ -182,12 +187,14 @@ header_search_btn.addEventListener('click', ()=>{
     search_bg.classList.toggle('active');
 })
 
-const search_btn = document.querySelector('.search button');
-const search_input = document.querySelector('.search_input input');
+const search_btns = document.querySelectorAll('.search button');
+const search_inputs = document.querySelectorAll('.search_input input');
 
-search_btn.addEventListener('click', ()=>{  
-    if(search_input.value !== ''){
-        search_input.value = '';
-    }
-})
+search_btns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        if (search_inputs[index].value !== '') {
+            search_inputs[index].value = '';
+        }
+    });
+});
 

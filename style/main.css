@@ -164,12 +164,35 @@
     align-items: center;
     gap: 5px;
   }
-  #m_phone .right_menu .user_menu li a {
+  #m_phone .right_menu .user_menu li button {
     display: block;
   }
-  #m_phone .right_menu .user_menu li a img {
+  #m_phone .right_menu .user_menu li button img {
     width: 20px;
     height: 20px;
+  }
+  #m_phone .right_menu .user_menu li .search {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 71px;
+    right: 0;
+    padding: 30px 15px;
+    justify-content: center;
+  }
+  #m_phone .right_menu .user_menu li .search .search_input {
+    text-align: center;
+  }
+  #m_phone .right_menu .user_menu li .search .search_input input {
+    height: 20px;
+    width: 240px;
+    margin-right: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #555;
+  }
+  #m_phone .right_menu .user_menu li .search.active {
+    display: flex;
   }
   #m_phone .product {
     display: none;

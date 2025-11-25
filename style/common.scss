@@ -194,13 +194,39 @@
                 align-items: center;
                 gap: 5px;
                 li {
-                    a {
+                    button {
                         display: block; 
                         img {
                             width: 20px;
                             height: 20px;                            
                         }                                          
-                    }                
+                    }   
+                    .search{
+                        display: none;
+                        position: absolute;
+                        background: #fff;                    
+                        width: 100%;
+                        top: 71px;
+                        right: 0;
+                        padding: 30px 15px;     
+                        
+                        justify-content: center;
+                        .search_input{                   
+                            text-align: center;                    
+                            input{
+                                height: 20px; width: 240px; 
+                                margin-right: 15px; font-size: 15px;
+                                border-bottom: 1px solid #555;
+                            }
+                            
+                        }  
+                        &.active{
+                            display: flex;
+                        }                         
+                    }
+                    
+
+
                 }
             }
         }
