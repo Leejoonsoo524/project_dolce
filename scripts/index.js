@@ -173,5 +173,21 @@ const snsBnr = new Swiper('#sns_slide',{
             spaceBetween: 80,
         }
     }
-
 })
+
+/************************검색창******************************/
+const header_search_btn = document.querySelector('.search_icon button');
+const search_bg = document.querySelector('.search_icon .search');
+header_search_btn.addEventListener('click', ()=>{    
+    search_bg.classList.toggle('active');
+})
+
+const search_btn = document.querySelector('.search button');
+const search_input = document.querySelector('.search_input input');
+
+search_btn.addEventListener('click', ()=>{  
+    if(search_input.value !== ''){
+        search_input.value = '';
+    }
+})
+
